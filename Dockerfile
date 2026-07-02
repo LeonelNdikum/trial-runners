@@ -1,17 +1,4 @@
-# ================================================================
-#  Zsoftly Team — Project 2: Dockerized Static Website
-#  Docker Engineer : Leonel Ndikum
-#  Team Lead       : Ketsy Kemajou
-#  Organisation    : Zsoftly Team
-#
-#  Image name     : static-website
-#  Container name : static-website
-#
-#  Build  : docker build -t static-website .
-#  Run    : docker run -d -p 8080:80 --name static-website static-website
-# ================================================================
 
-# Base image — official Nginx on Alpine Linux (lightweight & secure)
 FROM nginx:alpine
 
 # ── Image metadata ───────────────────────────────────────────────
