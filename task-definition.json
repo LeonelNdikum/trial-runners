@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:eu-north-1:520900722508:task-definition/default-trial-ecs-6d93:1",
+  "taskDefinitionArn": "arn:aws:ecs:eu-north-1:520900722508:task-definition/default-trial-ecs-de92:1",
   "containerDefinitions": [
     {
       "name": "Main",
@@ -22,15 +22,14 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/aws/ecs/default/trial-ecs-6d93-d5aa",
+          "awslogs-group": "/aws/ecs/default/trial-ecs-de92-1aa7",
           "awslogs-region": "eu-north-1",
           "awslogs-stream-prefix": "ecs"
         }
       }
     }
   ],
-  "family": "default-trial-ecs-6d93",
-  "taskRoleArn": "arn:aws:iam::520900722508:role/ecsTaskExecutionRole",
+  "family": "default-trial-ecs-de92",
   "executionRoleArn": "arn:aws:iam::520900722508:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "revision": 1,
@@ -50,9 +49,6 @@
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
     },
     {
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    },
-    {
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
     },
     {
@@ -62,8 +58,8 @@
   "placementConstraints": [],
   "compatibilities": [
     "EC2",
-    "FARGATE",
-    "MANAGED_INSTANCES"
+    "MANAGED_INSTANCES",
+    "FARGATE"
   ],
   "runtimePlatform": {
     "cpuArchitecture": "X86_64",
@@ -74,7 +70,7 @@
   ],
   "cpu": "1024",
   "memory": "2048",
-  "registeredAt": "2026-07-02T13:21:41.721Z",
+  "registeredAt": "2026-07-02T14:42:26.676Z",
   "enableFaultInjection": false,
   "tags": []
 }
