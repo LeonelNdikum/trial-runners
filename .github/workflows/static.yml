@@ -31,13 +31,11 @@ on:
     branches: [ "main" ]
 
 env:
-  AWS_REGION: eu-north-1                   
-  ECR_REPOSITORY: 520900722508.dkr.ecr.eu-north-1.amazonaws.com/trial-ecr-repo         
-  ECS_SERVICE: arn:aws:ecs:eu-north-1:520900722508:service/default/trial-ecs-9e56
-  ECS_CLUSTER: MY_ECS_CLUSTER                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: arn:aws:ecs:eu-north-1:520900722508:task-definition/default-trial-ecs-6d93:1
-                                               # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: trial-container          # set this to the name of the container in the
+  AWS_REGION: ${{ vars.AWS_REGION }}
+  ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
+  ECS_SERVICE: ${{ vars.ECS_SERVICE }}
+  ECS_CLUSTER: ${{ vars.ECS_CLUSTER }}
+  CONTAINER_NAME: ${{ vars.CONTAINER_NAME }}
                                                
 
 permissions:
