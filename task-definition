@@ -1,0 +1,80 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:eu-north-1:520900722508:task-definition/default-trial-ecs-6d93:1",
+  "containerDefinitions": [
+    {
+      "name": "Main",
+      "image": "trial-ecs",
+      "cpu": 1024,
+      "memoryReservation": 2048,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp",
+          "name": "main-80-tcp"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "secrets": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/aws/ecs/default/trial-ecs-6d93-d5aa",
+          "awslogs-region": "eu-north-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ],
+  "family": "default-trial-ecs-6d93",
+  "taskRoleArn": "arn:aws:iam::520900722508:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::520900722508:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 1,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": [
+    "EC2",
+    "FARGATE",
+    "MANAGED_INSTANCES"
+  ],
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "2048",
+  "registeredAt": "2026-07-02T13:21:41.721Z",
+  "enableFaultInjection": false,
+  "tags": []
+}
